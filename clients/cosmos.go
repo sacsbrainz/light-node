@@ -20,7 +20,7 @@ type ClientConfig struct {
 
 // Global configuration with default values
 var globalClientConfig = ClientConfig{
-	GrpcURL:      "34.31.74.109:9090",                                                 // Default gRPC endpoint
+	GrpcURL:      "34.57.133.111:9090",                                                 // Default gRPC endpoint
 	ContractAddr: "cosmos1ufs3tlq4umljk0qfe8k5ya0x6hpavn897u2cnf9k0en9jr7qarqqt56709", // Default contract address
 }
 
