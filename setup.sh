@@ -23,7 +23,9 @@ tar -C /usr/local -xzf go1.23.7.linux-$GO_ARCH.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 echo 'export GOPATH=$HOME/go' >> ~/.bashrc
 echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
-source ~/.bashrc && curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y && source "$HOME/.cargo/env"
+source ~/.bashrc 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y  
+source "$HOME/.cargo/env"
 rm -rf light-node
 git clone https://github.com/sacsbrainz/light-node.git 
 cd light-node
