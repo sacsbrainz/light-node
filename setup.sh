@@ -26,8 +26,15 @@ echo 'export PATH=$PATH:$GOPATH/bin' >> ~/.bashrc
 source ~/.bashrc 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y  
 source "$HOME/.cargo/env"
-rm -rf light-node
-git clone https://github.com/sacsbrainz/light-node.git 
+
+# check if light-node directory exists in the home directory
+if [ -d "$HOME/light-node" ]; then
+    echo "Directory light-node already exists, skipping cloning..."
+else
+    echo "Cloning light-node repository..."
+    git clone https://github.com/sacsbrainz/light-node.git --depth 1
+fi
+
 cd light-node
 
 sleep 1
